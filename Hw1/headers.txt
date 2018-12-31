@@ -1,0 +1,83 @@
+< HTTP/1.1 200 OK
+< Date: Mon, 13 Feb 2017 05:55:19 GMT
+< Expires: -1
+< Cache-Control: private, max-age=0
+< Content-Type: text/html; charset=ISO-8859-1
+< P3P: CP="This is not a P3P policy! See https://www.google.com/support/accounts/answer/151657?hl=en for more info."
+< Server: gws
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: SAMEORIGIN
+< Set-Cookie: NID=96=DPEDvs_7Af6xhIhS4CBa-FwEWMGJDOJf2G_s6kzylwW3hjIXOCCuTdXP2seNxcgDouQzCjAXAGSebE4zU-Am1PtglgnISR2o50-z5Sx4u8HVp8W-2nnX_1wNeNCvDeLgn7D0CrJVKMdywm8E; expires=Tue, 15-Aug-2017 05:55:19 GMT; path=/; domain=.google.com; HttpOnly
+< Alt-Svc: quic=":443"; ma=2592000; v="35,34"
+< Accept-Ranges: none
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
+
+1. Accept-Ranges: none
+The Accept-Ranges response HTTP header is a marker used by the server to advertise its support of partial requests. The value of this field indicates the unit that can be used to define a range. Generally this range is specified in bytes.
+
+<HTTP/1.1 200 OK
+< X-XSS-Protection: 0
+< public-key-pins-report-only: max-age=500; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18="; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E="; pin-sha256="q4PO2G2cbkZhZ82+JgmRUyGMoAeozA+BSXVXQWB8XWQ="; report-uri="http://reports.fb.com/hpkp/"
+< Pragma: no-cache
+< Cache-Control: private, no-cache, no-store, must-revalidate
+< Expires: Sat, 01 Jan 2000 00:00:00 GMT
+< X-Content-Type-Options: nosniff
+< P3P: CP="Facebook does not have a P3P policy. Learn why here: http://fb.me/p3p"
+< Strict-Transport-Security: max-age=15552000; preload
+< X-Frame-Options: DENY
+< Set-Cookie: fr=0W59BNIiUjL9Ky86N..BYoUnm.mq.AAA.0.0.BYoUnm.AWVj_qgk; expires=Sun, 14-May-2017 05:53:42 GMT; Max-Age=7776000; path=/; domain=.facebook.com; httponly
+< Vary: Accept-Encoding
+< Content-Type: text/html
+< X-FB-Debug: rcD8yv97eXVroNlUbNXumwe7Z9CsCswsddmNCnVeKP2szG98FN8UuVkDYfyOm0q1jE4wCpqeKp16Ys+VQ8G+Yw==
+< Date: Mon, 13 Feb 2017 05:53:42 GMT
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+
+2. Cache-Control: private, no-cache, no-store, must-revalidate
+The Cache-Control general-header field is used to specify directives for caching mechanisms in both, requests and responses. Caching directives are unidirectional, meaning that a given directive in a request is not implying that the same directive is to be given in the response.
+
+< HTTP/1.1 200 OK
+< Date: Mon, 13 Feb 2017 05:52:28 GMT
+< Content-Type: text/html
+< Content-Length: 81473
+< Connection: keep-alive
+< Server: mw1247.eqiad.wmnet
+< Cache-Control: s-maxage=86400, must-revalidate, max-age=3600
+< ETag: W/"13e41-5454975c08373"
+< Last-Modified: Wed, 04 Jan 2017 19:04:54 GMT
+< Backend-Timing: D=183 t=1486658341520291
+< Vary: Accept-Encoding
+< X-Varnish: 50260185 49557287, 714003121 721561250, 139319693 137010631, 1004880529 567188896
+< Via: 1.1 varnish-v4, 1.1 varnish-v4, 1.1 varnish-v4, 1.1 varnish-v4
+< Age: 47606
+< X-Cache: cp1054 hit/8, cp2016 hit/2, cp4018 hit/5, cp4009 hit/430153
+< X-Cache-Status: hit
+< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+< Set-Cookie: WMF-Last-Access=13-Feb-2017;Path=/;HttpOnly;secure;Expires=Fri, 17 Mar 2017 00:00:00 GMT
+< X-Analytics: https=1;nocookies=1
+< X-Client-IP: 50.152.242.117
+< Set-Cookie: GeoIP=US:CA:Sunnyvale:37.37:-122.02:v4; Path=/; secure; Domain=.wikipedia.org
+< Accept-Ranges: bytes
+
+3. X-Client-IP: 50.152.242.117
+In client-proxy setting at web server side, if the proxy receives the request from the client, it stores the client-ip address in HTTP header in X-Client-IP field before being forwarded further.
+
+< HTTP/1.1 200 OK
+< Date: Mon, 13 Feb 2017 05:49:32 GMT
+< P3P: policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+< Strict-Transport-Security: max-age=2592000
+< X-Frame-Options: DENY
+< Set-Cookie: autorf=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=www.yahoo.com
+< Vary: Accept-Encoding
+< Content-Type: text/html; charset=UTF-8
+< Age: 0
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< Via: http/1.1 ir34.fp.gq1.yahoo.com (ApacheTrafficServer)
+< Server: ATS
+< Cache-Control: no-store, no-cache, private, max-age=0
+< Expires: -1
+
+4. Via: http/1.1 ir34.fp.gq1.yahoo.com (ApacheTrafficServer)
+The Via general header is added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers. It is used for tracking message forwards, avoiding request loops, and identifying the protocol capabilities of senders along the request/response chain.

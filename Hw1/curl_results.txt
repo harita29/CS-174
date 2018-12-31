@@ -1,0 +1,69 @@
+Q: What User agent does curl use by default? 
+A: Curl uses "curl/7.52.1" user-agent for the query.
+
+Which of these sites change if in addition you use the -A flag and set the user agent to be that of your phone?
+A: All the sites change their response for using user-agent as a mobile. Except for google, yahoo and wikipedia, all other sites responded with "HTTP 3XX" return code, redirecting the request to their mobile servers. Google, yahoo and wikipedia responses changed and they responded back with new mobile webpage.
+
+====================================================================================================================================================================
+REQUESTS without "-A" flag:
+C:\Users\Harita>curl -v https://www.google.com/
+> GET / HTTP/1.1
+> Host: www.google.com
+> User-Agent: curl/7.52.1
+> Accept: */*
+
+C:\Users\Harita>curl -v https://www.facebook.com/
+> GET / HTTP/1.1
+> Host: www.facebook.com
+> User-Agent: curl/7.52.1
+> Accept: */*
+
+C:\Users\Harita>curl -v https://www.wikipedia.org/
+> GET / HTTP/1.1
+> Host: www.wikipedia.org
+> User-Agent: curl/7.52.1
+> Accept: */*
+
+C:\Users\Harita>curl -v https://www.yahoo.com/
+> GET / HTTP/1.1
+> Host: www.yahoo.com
+> User-Agent: curl/7.52.1
+> Accept: */*
+
+C:\Users\Harita>curl -v https://www.youtube.com/
+> GET / HTTP/1.1
+> Host: www.youtube.com
+> User-Agent: curl/7.52.1
+> Accept: */*
+
+====================================================================================================================================================================
+REQUESTS with "-A" flag:
+C:\Users\Harita>curl -v -A "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1" https://www.google.com/
+> GET / HTTP/1.1
+> Host: www.google.com
+> User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1
+> Accept: */*
+
+C:\Users\Harita>curl -v -A "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1" https://www.facebook.com/
+> GET / HTTP/1.1
+> Host: www.facebook.com
+> User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1
+> Accept: */*
+
+C:\Users\Harita>curl -v -A "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1" https://www.wikipedia.org/
+> GET / HTTP/1.1
+> Host: www.wikipedia.org
+> User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1
+> Accept: */*
+
+curl -v -A "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1" https://www.yahoo.com/
+> GET / HTTP/1.1
+> Host: www.yahoo.com
+> User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1
+> Accept: */*
+
+C:\Users\Harita>curl -v -A "Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1" https://www.youtube.com/
+> GET / HTTP/1.1
+> Host: www.youtube.com
+> User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_2_1 like Mac OS X) AppleWebKit/602.4.6 (KHTML, like Gecko) Version/10.0 Mobile/14D27 Safari/602.1
+> Accept: */*
